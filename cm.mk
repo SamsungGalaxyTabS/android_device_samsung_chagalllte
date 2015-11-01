@@ -1,12 +1,12 @@
 $(call inherit-product, device/samsung/chagalllte/full_chagalllte.mk)
 
 # Inherit some common bliss stuff.
-$(call inherit-product, vendor/bliss/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit more bliss stuff.
-$(call inherit-product, vendor/bliss/config/telephony.mk)
+$(call inherit-product, vendor/cm/config/telephony.mk)
 
-PRODUCT_NAME := bliss_chagalllte
+PRODUCT_NAME := cm_chagalllte
 PRODUCT_DEVICE := chagalllte
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
