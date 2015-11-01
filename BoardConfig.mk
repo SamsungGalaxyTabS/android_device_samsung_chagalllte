@@ -16,6 +16,18 @@
 
 LOCAL_PATH := device/samsung/chagalllte
 
+# BlissPop Configs
+TARGET_TC_ROM := 4.8
+TARGET_TC_KERNEL := 4.8
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := true
+BLISS_GRAPHITE := true
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
@@ -65,8 +77,8 @@ COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_CONFIG := cyanogenmod_chagalllte_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/chagalllte
+TARGET_KERNEL_CONFIG := deathly_chagalllte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/deathly
 
 # Charging mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -205,3 +217,4 @@ BOARD_ANT_WIRELESS_POWER := "bluedroid"
 
 # inherit from the proprietary version
 -include vendor/samsung/chagalllte/BoardConfigVendor.mk
+-include vendor/bliss/config/sm.mk
